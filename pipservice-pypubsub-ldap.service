@@ -1,0 +1,11 @@
+[Unit]
+Description=PyPubSub LDAP Notifying Client
+ 
+[Service]
+Type=simple
+WorkingDirectory=/opt/pypubsub-ldap
+ExecStart=/usr/local/bin/pipenv run python3 client.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
